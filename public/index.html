@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://player.live-video.net/1.2.0/amazon-ivs-player.min.js"></script>
+    <video id="video-player" playsinline></video>
+    <script>
+        const PLAYBACK_URL = "https://1445637cabe9.us-west-2.playback.live-video.net/api/video/v1/us-west-2.661723793673.channel.LfaJcN9ul7Uh.m3u8"
+        if (IVSPlayer.isPlayerSupported) {
+            const player = IVSPlayer.create();
+            player.attachHTMLVideoElement(document.getElementById('video-player'));
+            player.load(PLAYBACK_URL);
+            player.play();
+        }
+    </script>
+</html>
